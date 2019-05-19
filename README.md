@@ -39,7 +39,7 @@ This is a python web application that allows users to post pictures to there own
 * Git  
 
 
-## Contact Information 
+## Contact Information  
 
 * Email (vanmowha@gmail.com)
 
