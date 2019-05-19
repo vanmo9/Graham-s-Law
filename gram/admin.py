@@ -3,6 +3,6 @@ from .models import Profile,Image
 
 # Register your models here.
 admin.site.register(Profile)
-admin.site.register(Image)
+admin.site.register(Image)  
 
 
