@@ -17,7 +17,14 @@ class Profile(models.Model):
         self.delete()
 
     def update_profile(self):
-        self.update()           
+        self.update()  
+
+
+
+#     @receiver(post_save, sender=User)
+#     def create_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         Profile.objects.create(user=instance)             
     
 
 class Image(models.Model):    
