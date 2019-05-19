@@ -17,7 +17,7 @@ This is a python web application that allows users to post pictures to there own
 3.  From terminal you use
     '$ git clone <https://github.com/vanmo9/Grahams-Law/>'
 
-
+  
 ## BDD  
 
 | BEHAVIOUR | OUTPUT|
