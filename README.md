@@ -31,7 +31,7 @@ This is a python web application that allows users to post pictures to there own
 | User clicks on like icon  |  User likes the post. | 
 
 
-## Technologies Used
+## Technologies Used 
 
 * Python
 * CSS
