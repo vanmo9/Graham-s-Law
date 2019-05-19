@@ -1,0 +1,19 @@
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <!-- <h1>Personal Photo App <span class="badge badge-secondary">Pro</span></h1> -->
+          <a class="badge badge-light" href="{% url 'photoShoot' %}"> Personal Photo App <span class="badge badge-secondary">Pro</span></a>
+      </div>
+  
+      <!-- Adding a search form  -->
+      <div class="col-sm-4 col-md-4 navbar-right">
+  
+        <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search_results' %}">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search Location" aria-label="Search" name="location" >
+          <button class="btn btn-light" type="submit">Search</button>
+        </form>
+        
+      </div>
+      <!-- search form end -->
+    </div>
+  </nav>
