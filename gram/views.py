@@ -2,7 +2,12 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
+from .models import *
 
+def index(request):
+    images = Image.objects.all()
+    # user = User.objects.get(id=id)
+    return render(request,'index.html', {"images": images})
 
 def register(request):
    if request.method == 'POST':
@@ -68,10 +73,6 @@ def profile(request):
 
 # # Create your views here.
 # @login_required(login_url='/accounts/login')
-# def index(request):
-#     images = Image.objects.all()
-#     # user = User.objects.get(id=id)
-#     return render(request,'index.html', {"images": images})
 
 
 # @login_required(login_url='/accounts/login')
