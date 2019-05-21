@@ -35,7 +35,7 @@ class Image(models.Model):
     image_comments = models.TextField()
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     pub_date = models.DateTimeField(auto_now_add=True)
-    photo_image = models.ImageField(default="default.jpeg", upload_to = 'images/')
+    img = models.ImageField(default="default.jpeg", upload_to = 'images/')
     likes = models.IntegerField()
 
     def __str__(self):

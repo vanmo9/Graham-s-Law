@@ -1,5 +1,78 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
+{% block content %}
+<div class="card-deck">
+  <div class="container">
+      <div class="row">
+          {% for photo in images %}         
+          <div class="col-md-4">
+              <div class="card mb-3" style="max-width: 540px;">
+                  <img src='{{photo.img.url}}' alt="" class="card-img-top" width="100%" height="225">
+                  <div class="card-body">
+                      <p class="card-text">
+                          {{ photo.image_caption }}
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-primary" id="photo{{photo.id}}"
+                            data-whatever="{{photo.id}}" data-toggle="modal" data-target="#{{photo.id}}"
+                            onclick="showinfo(go)">Like</button> 
+                          </div>
+                          <button type="button" class="btn btn-sm btn-outline-primary" id="photo{{photo.id}}"
+                                  data-whatever="{{photo.id}}" data-toggle="modal" data-target="#{{photo.id}}"
+                                  onclick="showinfo(go)">Comment</button>
+                      </div>
+                  </div>
+              </div>
+          </div>           
+          {% empty %}
+          <h3 class="text-center"> Ooops!!!! </h3>
+          {%endfor%}
+      </div>
+  </div>
+</div>
+
+
+{% for photo in images %}
+<div id="{{photo.id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+   aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+       <div class="modal-content bg-secondary">
+           <div class="modal-header">
+               <h4 class="modal-title" id="imagetitle"></h4>
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+           </div>
+           <form>
+         
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Comment:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+           <div class="modal-body" style="text-align:center">
+               <button type="button" class="btn btn-primary" data-dismiss="modal">Comment</button>
+           </div>
+  
+       </div>
+   </div>
+</div>
+
+{%endfor%}
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+{%comment%}
+{% extends 'base.html' %}
+{% load bootstrap4 %}
 {% load staticfiles %}
 {% block content%}
   {# for image in images #}
@@ -19,3 +92,4 @@
       </div>
     </div>
 {%endblock%}
+{% endcomment%}

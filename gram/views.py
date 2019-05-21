@@ -21,9 +21,29 @@ def register(request):
        form = UserRegisterForm()
    return render(request, 'registration/register.html', {'form': form})
 
+# def profile(request):
+#     return render(request, 'register/profile.html')
+
 @login_required
 def profile(request):
-    return render(request, 'register/profile.html')
+    # user = User.objects.get(id=id)
+#     followers = user.user_followers.all()
+#     followers_arr = []
+#     for follower in followers:
+#         followers_arr.append(follower.followed_by.id)
+
+#     if request.user.id in followers_arr:
+#         is_following = True
+#     else:
+#         is_following = Falseef profile(request):ef profile(request):
+# #     return render(request, 'register/profile.html')
+# #     return render(request, 'register/profile.html')
+
+#     if request.user.id == int(id):
+#         return redirect("profile")
+#     else:
+        return render(request, "profile.html", )
+
 
 
 
@@ -95,24 +115,6 @@ def profile(request):
 #     else:
 #         message = "You haven't searched for any term"
 #         return render(request, 'registration/search.html',{"message":message})
-
-
-# def profile(request, id):
-#     user = User.objects.get(id=id)
-#     followers = user.user_followers.all()
-#     followers_arr = []
-#     for follower in followers:
-#         followers_arr.append(follower.followed_by.id)
-
-#     if request.user.id in followers_arr:
-#         is_following = True
-#     else:
-#         is_following = False
-
-#     if request.user.id == int(id):
-#         return redirect("profile")
-#     else:
-#         return render(request, "profile.html", {"user": user, "current_user": request.user, "is_following": is_following})
 
 
 
