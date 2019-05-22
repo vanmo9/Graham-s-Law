@@ -47,5 +47,5 @@ This is a python web application that allows users to post pictures to there own
 * Email (vanmowha@gmail.com)
 
 
-## License ([MIT License](  ))
+## License ([MIT License](https://github.com/vanmo9/Grahams-Law/blob/master/LICENSE))
 This project is licensed under the MIT Open Source license, (c) [Mohamed Hassan]( )
