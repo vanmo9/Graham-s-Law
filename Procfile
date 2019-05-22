@@ -1,1 +1,1 @@
-web: gunicorn grahams.wsgi --log-file -
+web: gunicorn instagram.wsgi --log-file -
