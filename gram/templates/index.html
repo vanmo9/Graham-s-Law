@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% block content %}
+{%load static%}
 <body style="background-image:url('http://brandingbypixels.com/wp-content/uploads/2018/02/Instagram-Account-create.jpg'); background-repeat:no-repeat;background-size: cover;">
 
 <div class="card-deck" style="margin-top: 60px; margin-left: 400px;" >
@@ -10,13 +11,13 @@
           <div class="col-md-12">
               <div class="card mb-3" style="max-width: 700px; max-height: 900px;">
                      <h1>{{ photo.image_name }}</h1> 
-                  <img src="{{photo.img.url}}"  alt="" class="card-img-top" width="100%" height="305">
+                  <img src="/static{{photo.img.url}}"  alt="" class="card-img-top" width="100%" height="305">
                   <div class="card-body">
                    
                       <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
                             <button type="button" class="fas fa-heart" id="photo{{photo.id}}"
-                            data-whatever="{{photo.id}}" data-toggle="modal" data-target="#{{photo.id}}"
+                            data-whatever="{{photo.id}}" data-toggle="modal" data-target="#{{photos.id}}"
                             onclick="showinfo(go)">Like</button> 
                           </div>
                           <button type="button" class="fas fa-comment" id="photo{{photo.id}}"
