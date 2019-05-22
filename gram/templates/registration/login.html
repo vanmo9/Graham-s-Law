@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="moha">
+            <img src="/static/img/instagram.png" alt="instagram" style="width: 550px; margin-left: 500px;">
+        </div>
+    </div>
+    <div class="col-md-7">
     <div class="content-section" style="width:30%;float:right;">
         <form method="POST">
             {% csrf_token %}
@@ -17,5 +24,7 @@
                 Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
             </small>
         </div>
+    </div>
+     </div>
     </div>
 {% endblock content %}
