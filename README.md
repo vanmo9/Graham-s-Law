@@ -1,6 +1,7 @@
 # Grahams-Law
 
 This is a python web application that allows users to post pictures to there own profiles and can also view other user's profile. They can also like and comment on other user's post. 
+![Screenshot](readme.png)
 
 ## Author 
 

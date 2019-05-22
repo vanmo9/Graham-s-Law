@@ -25,7 +25,7 @@ SECRET_KEY = 'u%2917bfzaro01n8^q_lvg0xmvjkzj!5+mizb*zi(-%o&_qvn9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['grahams.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -80,9 +80,19 @@ WSGI_APPLICATION = 'instagram.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES= {'default': dj_database_url.config()}
+# import dj_database_url 
+# prod_db  =  dj_database_url.config(conn_max_age=500)
+# DATABASES= {'default': dj_database_url.config()}
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'instaclone',
+        'USER': 'mohamed',
+    'PASSWORD':'mo',
+    }
+}
 
 
 # Password validation
@@ -121,8 +131,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# STATIC_URL = '/static/'
+# STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
+
 STATIC_URL = '/static/'
-STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
@@ -141,4 +156,4 @@ LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
